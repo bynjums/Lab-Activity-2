@@ -1,6 +1,7 @@
-NAME: Gimena, Byn Jumer L.
+# NAME: Gimena, Byn Jumer L.
 Section: BSIT 2A
 
+# Console Output:
 === Original Methods and Getters ===
 Toyota Supra 1978
 48
