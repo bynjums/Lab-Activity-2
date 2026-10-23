@@ -1,6 +1,5 @@
 public class Main {
 
-    // DEMO 2: One method accepts different Vehicle subclasses
     public static void printDetails(Vehicle v) {
         v.displayInfo();
     }
@@ -8,7 +7,7 @@ public static void main(String[] args) {
 
         //CAR
         System.out.println("=== 1. Parent Reference ===");
-        Vehicle vehicle = new Car("Tesla", "Roadster", 2026, 4);
+        Vehicle vehicle = new Car("Porche", "918 Spyder", 2013, 2;
         vehicle.displayInfo();
         System.out.println();
 
@@ -31,18 +30,22 @@ public static void main(String[] args) {
         //TRAK
         printDetails(new Truck("Hino", "500", 2024, 6));
         System.out.println();
+    
         printDetails(new Motorcycle("Honda", "Click", 2025, "155cc"));
+        vehicle.displayInfo();
+        System.out.println();
 
-        // DEMO 3: Array of parent type holding different children
+        //ARRAYKO
         System.out.println("\n=== 3. Array of Vehicles ===");
         Vehicle[] garage = {
             new Car("Honda", "Civic", 2024, 4),
             new Truck("Isuzu", "Elf", 2022, 4),
             new Motorcycle("Suzuki", "Raider", 2025, "150cc")
         };
-        for (Vehicle v : garage) {
-            v.displayInfo();
-            System.out.println();
+       
+            for (Vehicle v : garage) {
+                 v.displayInfo();
+                   System.out.println();
         }
     }
 
