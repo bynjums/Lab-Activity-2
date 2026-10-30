@@ -7,7 +7,7 @@ public static void main(String[] args) {
 
         //CAR
         System.out.println("=== 1. Parent Reference ===");
-        Vehicle vehicle = new Car("Porche", "918 Spyder", 2013, 2;
+        Vehicle vehicle = new Car("Porche", "918 Spyder", 2013, 2);
         vehicle.displayInfo();
         System.out.println();
 
@@ -32,7 +32,6 @@ public static void main(String[] args) {
         System.out.println();
     
         printDetails(new Motorcycle("Honda", "Click", 2025, "155cc"));
-        vehicle.displayInfo();
         System.out.println();
 
         //ARRAYKO
@@ -45,8 +44,12 @@ public static void main(String[] args) {
        
             for (Vehicle v : garage) {
                  v.displayInfo();
-                   System.out.println();
+                 v.moveForward();
+                 v.moveBackwards();
+                 v.moveLeft();
+                 v.moveRight();
+                System.out.println();
         }
     }
-
 }
+
