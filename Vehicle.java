@@ -13,4 +13,8 @@ public class Vehicle {
 public void displayInfo() {
         System.out.println("Brand: " + brand + ", Model: " + model + ", Year: " + year);
     }
+    public abstract void moveForward();
+    public abstract void moveBackwards();
+    public abstract void moveLeft();
+    public abstract void moveRight();
 }
