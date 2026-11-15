@@ -34,6 +34,6 @@ public class Motorcycle extends Vehicle implements Serviceable {
     
     @Override
     public void service() {
-        System.out.println("Motorcycle: inspect tires and brakes.");
+        System.out.println("Motorcycle: inspect brake and suspension.");
     }
 }
