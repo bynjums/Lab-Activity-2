@@ -1,46 +1,24 @@
 public class Main {
 
-    public static void printDetails(Vehicle v) {
-        v.displayInfo();
+    public static void performService(Serviceable item) {
+        item.service();
     }
 public static void main(String[] args) {
 
-        //CAR
-        System.out.println("=== 1. Parent Reference ===");
-        Vehicle vehicle = new Car("Porche", "918 Spyder", 2013, 2);
-        vehicle.displayInfo();
-        System.out.println();
-
-        //TRUCK
-        vehicle = new Truck("Isuzu", "Giga", 2025, 6);
-        vehicle.displayInfo();
-        System.out.println();
-
-        //MOTOWR
-        vehicle = new Motorcycle("Kawasaki", "Ninja", 2026, "1000 CC");
-        vehicle.displayInfo();
-        System.out.println();
-
-        //CAR
-        System.out.println("\n=== 2. Method Parameter ===");
         Car car = new Car("Toyota", "Innova", 2023, 4);
-        printDetails(car);
-        System.out.println();
+        Motorcycle motorcycle = new Motorcycle("Honda", "Click", 2025, "155cc");
+        Truck truck = new Truck("Isuzu", "Giga", 2025, 6);
+        Printer printer = new Printer();
 
-        //TRAK
-        printDetails(new Truck("Hino", "500", 2024, 6));
-        System.out.println();
-    
-        printDetails(new Motorcycle("Honda", "Click", 2025, "155cc"));
-        System.out.println();
+        System.out.println("=== Serviceable Array ===");
 
-        //ARRAYKO
-        System.out.println("\n=== 3. Array of Vehicles ===");
-        Vehicle[] garage = {
-            new Car("Honda", "Civic", 2024, 4),
-            new Truck("Isuzu", "Elf", 2022, 4),
-            new Motorcycle("Suzuki", "Raider", 2025, "150cc")
-        };
+        Serviceable[] serviceItems = { car, motorcycle, truck, printer };
+
+           for (Serviceable item : serviceItems) {
+            performService(item);
+        }
+        System.out.println("\n=== Vehicle Array ===");
+        Vehicle[] vehicles = { car, motorcycle, truck };
        
             for (Vehicle v : garage) {
                  v.displayInfo();
